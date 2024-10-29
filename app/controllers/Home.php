@@ -4,9 +4,9 @@
     public function index ()
     {
          $data['judul'] = 'Home';
-         $data['nama'] = $this->model('User_model')->getUser();
-           $this->view('templat/header', $data);
-           $this->view('home/index', $data  );
-           $this->view('templat/footer');
+         $data['mobil'] = $this->model('Mobil')->getAll();
+         $this->view('templat/header', $data);
+         $this->view('index', $data  );
+         $this->view('templat/footer');
     }
  }

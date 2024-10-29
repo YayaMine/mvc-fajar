@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman <?= $data['judul']; ?></title>
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
+    <!-- ExRyze was here -->
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
@@ -37,7 +38,7 @@
                         <a class="nav-link ms-4" href="#Car" style="font-family: 'Roboto', sans-serif;">CAR</a>
                     </li>
                     <li class="nav-item z-3">
-                        <a class="nav-link ms-4" href="" style="font-family: 'Roboto', sans-serif;">ORDER CAR</a>
+                        <a class="nav-link ms-4" href="<?= BASEURL ?>/order" style="font-family: 'Roboto', sans-serif;">ORDER CAR</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center z-3">

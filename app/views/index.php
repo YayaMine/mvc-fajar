@@ -37,7 +37,7 @@
             <div class="d-flex align-items-center justify-content-center"
                 style="height: 100%; font-family: 'Kanit', sans-serif;">
                 <li class="nav-item list-unstyled text-center">
-                    <img src="../public/img/icon-car.png" height="40" width="40" style="margin-right: 5px;" alt="">
+                    <img src="<?= IMG ?>icon-car.png" height="40" width="40" style="margin-right: 5px;" alt="">
                     <h1 style="font-size: 20px;">Antar Jemput</h1>
                     <p class="text-secondary" style="margin-left: 10px;">pelayanan antar jemput <br>mobil di mana pun
                     </p>
@@ -70,15 +70,16 @@
 
         <!-- card car -->
         <div class="d-flex justify-content-center">
-            <div class="card m-2 shadow" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-warning">Rent Car</a>
+            <?php foreach ($data['mobil'] as $mobil) { ?>
+                <div class="card m-2 shadow" style="width: 18rem;">
+                    <img src="<?= IMG.$mobil['image'] ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $mobil['nama'] ?></h5>
+                        <p class="card-text"><?= $mobil['deskripsi'] ?></p>
+                        <a href="#" class="btn btn-warning">Rent Car</a>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             <div class="card m-2 shadow" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
